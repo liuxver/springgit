@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="weibo">
+    <output-path>$PROJECT_DIR$/out/artifacts/weibo</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="weibo" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

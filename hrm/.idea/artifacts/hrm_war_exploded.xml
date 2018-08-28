@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hrm:war exploded">
+    <output-path>$PROJECT_DIR$/target/liuxv</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hrm" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/liuxv/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="hrm/web/Web" />
+    </root>
+  </artifact>
+</component>

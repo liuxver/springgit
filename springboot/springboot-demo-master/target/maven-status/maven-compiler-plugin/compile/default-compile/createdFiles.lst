@@ -1,0 +1,6 @@
+com\song\configuration\Entry.class
+com\song\entity\User.class
+com\song\controller\UserController.class
+com\song\configuration\JpaConfiguration.class
+com\song\repository\UserRepositoty.class
+com\song\service\UserService.class

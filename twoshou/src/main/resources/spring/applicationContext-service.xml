@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 商品管理的service -->
+    <bean id="goodsService" class="com.liuxv.twoshou.service.impl.GoodsServiceImpl"/>
+    <bean id="ordersService" class="com.liuxv.twoshou.service.impl.OrdersServiceImpl"/>
+    <bean id="talksService" class="com.liuxv.twoshou.service.impl.TalksServicesImpl"/>
+    <bean id="userService" class="com.liuxv.twoshou.service.impl.UserServiceImpl"/>
+
+
+</beans>

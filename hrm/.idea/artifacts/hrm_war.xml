@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hrm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="liuxv.war">
+      <element id="artifact" artifact-name="hrm:war exploded" />
+    </root>
+  </artifact>
+</component>

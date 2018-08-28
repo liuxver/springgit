@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 商品管理的service -->
+
+    <bean id="employeeService" class="com.liuxv.tws.service.impl.UserServiceImpl" />
+    <bean id="etoolService" class="com.liuxv.tws.service.impl.AtoolServiceImpl"  />
+    <bean id="itoolService" class="com.liuxv.tws.service.impl.BtoolServiceImpl" />
+    <bean id="lendService" class="com.liuxv.tws.service.impl.OrdersServiceImpl" />
+    <bean id="atoolorderService" class="com.liuxv.tws.service.impl.AtoolorderServiceImpl" />
+    <bean id="robotService" class="com.liuxv.tws.service.impl.RobotServiceImpl"/>
+
+
+</beans>

@@ -1,0 +1,49 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+
+    <!-- 处理器适配器 所有处理器适配器都实现了HandlerAdapter接口 -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+
+
+    <!-- 配置Handler -->
+    <bean id="itemsController" class="com.crow.ssm.controller.ItemsController"/>
+
+
+    <!-- 处理器映射器 将bean的name作为url进行查找，需要在配置Handler时指定beanname(就是url) 所有的映射器都实现了HandlerMapping接口 -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+
+
+    <!-- 视图解析器 解析jsp,默认使用jstl,classpath下要有jstl的包 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+
+    <!--在springmvc.xml中视图解析器配置前缀和后缀： -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 配置jsp路径的前缀 -->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!-- 配置jsp路径的后缀 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+
+    <!--注解映射器 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+    <!--注解适配器 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+    <!-- 使用 mvc:annotation-driven代替上边注解映射器和注解适配器配置 mvc:annotation-driven默认加载很多的参数绑定方法， 比如json转换解析器就默认加载了，如果使用mvc:annotation-driven不用配置上边的RequestMappingHandlerMapping和RequestMappingHandlerAdapter 实际开发时使用mvc:annotation-driven -->
+    <!-- <mvc:annotation-driven></mvc:annotation-driven> -->
+
+
+    <!-- <bean class="com.crow.ssm.controller.ItemsController3" /> -->
+    <!-- 可以扫描controller、service、... 这里让扫描controller，指定controller的包 -->
+    <context:component-scan base-package="com.crow.ssm.controller"></context:component-scan>
+
+
+</beans>
